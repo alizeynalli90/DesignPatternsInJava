@@ -1,0 +1,10 @@
+package design.patterns.structural.adapter;
+
+public class AudioPlayer implements MediaPlayer{
+
+	public void play() {
+		System.out.println("now mp3 playing.");
+		
+	}
+
+}

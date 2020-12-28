@@ -1,0 +1,10 @@
+package design.patterns.structural.bridge;
+
+public class GreenCircle implements DrawAPI {
+
+	public void drawCircle() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package design.patterns.structural.decorator;
+
+public class RedShapeDecorator extends ShapeDecorator {
+
+}

@@ -1,0 +1,9 @@
+package design.patterns.structural.adapter;
+
+public interface AdvancedMediaPlayer {
+	
+	public void playVLS(String fileName);
+
+	public void playMP4(String fileName);
+
+}

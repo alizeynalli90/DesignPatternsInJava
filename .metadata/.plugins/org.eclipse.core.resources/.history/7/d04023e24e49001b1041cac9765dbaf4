@@ -1,0 +1,10 @@
+package design.patterns.structural.decorator;
+
+public abstract class ShapeDecorator implements Shape {
+
+	public void draw() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

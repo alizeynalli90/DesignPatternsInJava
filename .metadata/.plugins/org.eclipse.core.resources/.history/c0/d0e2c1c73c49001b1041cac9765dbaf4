@@ -1,0 +1,34 @@
+package design.patterns.structural.composite;
+
+import java.util.List;
+
+public class Employee {
+	
+	private String name;
+	
+	private String dept;
+	
+	private int salary;
+	
+	private List<Employee> subordinates;
+
+	public Employee(String name, String dept, int salary, List<Employee> subordinates) {
+		this.name = name;
+		this.dept = dept;
+		this.salary = salary;
+		this.subordinates = subordinates;
+	}
+	
+	public void add() {
+		
+	}
+	
+	public void remove() {
+		
+	}
+
+	public List<Employee> getSubordinates() {
+		return subordinates;
+	}
+
+}

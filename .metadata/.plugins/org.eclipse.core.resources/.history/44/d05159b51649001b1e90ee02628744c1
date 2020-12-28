@@ -1,0 +1,15 @@
+package design.patterns.structural.adapter;
+
+public class MP4Player implements AdvancedMediaPlayer {
+
+	public void playVLS() {
+		// 
+
+	}
+
+	public void playMP4() {
+		System.out.println("now mp4 playing.");
+
+	}
+
+}

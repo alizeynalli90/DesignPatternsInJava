@@ -1,0 +1,10 @@
+package design.patterns.structural.proxy;
+
+public class RealImage implements Image {
+
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package design.patterns.structural.bridge;
+
+public class RedCircle implements DrawAPI {
+
+	public void drawCircle() {
+		System.out.println("red circle is drawn.");
+	}
+
+}
