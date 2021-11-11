@@ -1,0 +1,23 @@
+@startuml
+
+component "Frontend_Web" {
+}
+
+component "Frontend_Mobile" {
+}
+
+component "BFF" {
+}
+
+component "Backend_Web" {
+}
+
+component "Backend_Mobile" {
+}
+
+Frontend_Web <--> BFF
+Frontend_Mobile <--> BFF
+BFF <--> Backend_Web
+BFF <--> Backend_Mobile
+
+@enduml

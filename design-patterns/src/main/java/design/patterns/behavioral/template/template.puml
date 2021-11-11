@@ -1,0 +1,39 @@
+@startuml
+
+class Demo {
+    - CashFlowTemplate cashFlowTemplate;
+
+    + CashFlow calculateCashFlow();
+}
+
+component template {
+
+abstract class CashFlowTemplate {
+    + final CashFlow calculateCashFlow()
+        calculateFixCashFlow();
+        calculateVariableCashFlow();
+
+
+    + {abstract} CashFlow calculateFixCashFlow();
+    + {abstract} CashFlow calculateVariableCashFlow();
+}
+
+class IncomeService {
+    + Income calculateFixCashFlow();
+    + Income calculateVariableCashFlow();
+}
+class ExpenseService {
+    + Expense calculateFixCashFlow();
+    + Expense calculateVariableCashFlow();
+}
+}
+
+class IncomeService extends CashFlowTemplate
+class ExpenseService extends CashFlowTemplate
+class Income extends CashFlow
+class Expense extends CashFlow
+Demo --> CashFlowTemplate
+CashFlowTemplate --> CashFlow
+IncomeService --> Income
+ExpenseService --> Expense
+@enduml

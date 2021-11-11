@@ -1,0 +1,24 @@
+@startuml
+
+component "Primary" {
+}
+
+component "Vendor1" {
+}
+component "Vendor2" {
+}
+component "Vendor3" {
+}
+
+component "Aggregator" {
+}
+
+Primary --> Vendor1: Request
+Primary --> Vendor2: Request
+Primary --> Vendor3: Request
+Vendor1 --> Aggregator: Response
+Vendor2--> Aggregator: Response
+Vendor3 --> Aggregator: Response
+Aggregator --> Primary: Response
+
+@enduml

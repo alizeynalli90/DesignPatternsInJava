@@ -1,0 +1,44 @@
+@startuml
+
+cloud "CDN"
+
+database "Load_Balancer"
+
+component "User" {
+    [browser]
+    [mobile]
+}
+
+component "Data_Center" {
+    database "Database" {
+        [Shard 1]
+        [Shard 2]
+    }
+
+    database "Cache" {
+        [Cache 1]
+        [Cache 2]
+    }
+
+    node "Web" {
+        [Web 1]
+        [Web 2]
+    }
+
+    cloud "Message_Queue"
+
+    node "Service" {
+            [Service 1]
+            [Service 2]
+    }
+}
+
+User --> CDN
+[mobile] -->  Load_Balancer
+[browser] -->  Load_Balancer
+Load_Balancer --> Data_Center
+Web --> Database
+Web --> Cache
+Web --> Message_Queue
+Message_Queue --> Service
+@enduml

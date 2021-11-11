@@ -1,0 +1,20 @@
+@startuml
+
+component "Primary_Service" {
+    [Core_Functionality]
+}
+
+component "Ambassador" {
+    [Network_Functionality]
+}
+
+component "Remote_Service" {
+    [Remote_Functionality]
+}
+
+Primary_Service --> Ambassador: Request
+Ambassador --> Primary_Service: Response
+Ambassador --> Remote_Service: Request
+Remote_Service --> Ambassador: Response
+
+@enduml

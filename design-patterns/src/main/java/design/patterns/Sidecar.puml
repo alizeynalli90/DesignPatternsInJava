@@ -1,0 +1,17 @@
+@startuml
+
+component "Primary" {
+    [Core_Functionality]
+}
+
+component "Sidecar" {
+    [Abstraction]
+    [Proxy]
+    [Logging]
+    [Configuration]
+}
+
+Core_Functionality --> Sidecar
+Sidecar --> Core_Functionality
+
+@enduml
