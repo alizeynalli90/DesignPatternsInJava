@@ -1,0 +1,34 @@
+@startuml
+
+cloud Producers {
+[Producer 2]
+[Producer 1]
+}
+
+cloud Consumers {
+package "Consumer Groups" {
+[Consumer 3]
+[Consumer 2]
+[Consumer 1]
+
+}
+}
+node "Event Storage" {
+
+component "Topic 1"
+
+component "Topic 2"
+}
+
+cloud DB {
+database "Data Storage"
+}
+
+[Consumer 1] --> [Topic 1]
+[Consumer 2] --> [Topic 2]
+[Consumer 3] --> [Topic 2]
+[Producer 1] --> [Topic 1]
+[Producer 2] --> [Topic 2]
+[Topic 1] --> [Data Storage]
+[Topic 2] --> [Data Storage]
+@enduml

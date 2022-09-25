@@ -1,0 +1,24 @@
+@startuml
+cloud A {
+package "Subsystem A" {
+[Service A]
+database "DB A"
+}
+}
+cloud B {
+package "Subsystem B" {
+[Service B]
+database "DB B"
+}
+}
+node ACL {
+component "Anti-Corrupion Layer"
+}
+
+[Service A] --> [DB A]
+[Service B] --> [DB B]
+[Service A] --> [Anti-Corrupion Layer]
+[Anti-Corrupion Layer] --> [Service A]
+[Service B] --> [Anti-Corrupion Layer]
+[Anti-Corrupion Layer] --> [Service B]
+@enduml

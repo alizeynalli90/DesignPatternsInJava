@@ -1,0 +1,23 @@
+@startuml
+
+cloud "Service A" {
+component Persistence
+}
+node "Data Store" {
+component Command [
+   write model
+]
+component Query [
+   read model
+]
+}
+
+database DB [
+    Database
+]
+
+Persistence --> Command
+Persistence --> Query
+DB --> Query
+Command --> DB
+@enduml
